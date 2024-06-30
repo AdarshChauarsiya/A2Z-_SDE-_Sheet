@@ -1,0 +1,19 @@
+class Solution {
+  public:
+    Node* constructLL(vector<int>& arr) {
+        // code here
+        Node*head=NULL,*tail=NULL;
+        int i=0;
+        while(i<arr.size()){
+            Node*newnode=new Node(arr[i]);
+            if(head==NULL){
+                head=newnode;
+                tail=newnode;
+            }else{
+                tail->next=newnode;
+                tail=tail->next;
+            }
+            i=i+1;
+        }
+        return head;
+    }
