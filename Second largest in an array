@@ -1,0 +1,31 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;
+    vector<int>arr;
+    for(int i=0;i<n;i++){
+        int ele;
+        cin>>ele;
+        arr.push_back(ele);
+    }
+    int ans=0,s=0,f=0,ans2=0;
+    for(int i=0;i<n;i++){
+        if(ans<arr[i]){
+            f=i;
+           // ans=arr[i];
+        }
+    }
+  //  cout<<"Largest Element"<<arr[f]<<endl;
+    for(int i=0;i<n;i++){
+        if(arr[i]!=arr[f]){
+            if(ans2<arr[i]){
+                s=i;
+            }
+        }
+    }
+    cout<<"Second Largest Element : "<<arr[s];
+    
+}
